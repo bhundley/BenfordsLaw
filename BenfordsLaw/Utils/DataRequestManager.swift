@@ -10,7 +10,6 @@ import Foundation
 
 class DataRequestManager {
     fileprivate let trackingUrl = "https://covidtracking.com/api/states"
-//    fileprivate let trackingUrl = "https://covidtracking.com/api/counties"
     
     static let shared = DataRequestManager()
     

@@ -29,6 +29,15 @@ extension ViewController {
             if let first = String(number).first, let index = Int(String(first)) {
                 count[index, default: 0] += 1
             }
+            
+            // A check to see if the negative and positive results equals the total
+            // They appear to equal totalTestResults but not total
+//            if stateData.negative + stateData.positive == stateData.totalTestResults {
+//                print("State: \(stateData.state) ✅")
+//            }
+//            else {
+//                print("State: \(stateData.state) ❌")
+//            }
         }
     }
     
@@ -106,9 +115,10 @@ extension ViewController {
                            usingSpringWithDamping: 0.4,
                            initialSpringVelocity: 2.0,
                            options: .curveEaseIn,
-                           animations: ({
-                                self.view.layoutIfNeeded()
-                           }), completion: nil)
+                           animations: ({ [weak self] in
+                                self?.view.layoutIfNeeded()
+                           }),
+                           completion: nil)
         }
     }
 }
