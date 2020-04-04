@@ -5,3 +5,5 @@ Build/*
 xcuserdata
 profile
 DerivedData
+*.xccheckout
+*.xcworkspace
