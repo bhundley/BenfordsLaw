@@ -17,11 +17,11 @@ extension ViewController {
             // Get the data set for the selected results type
             switch type {
             case .total:
-                number = stateData.totalTestResults
+                number = stateData.totalTestResults ?? 0
             case .positive:
-                number = stateData.positive
+                number = stateData.positive ?? 0
             case .negative:
-                number = stateData.negative
+                number = stateData.negative ?? 0
             }
             
             // Get the first digit of the specified number
@@ -70,7 +70,7 @@ extension ViewController {
             
             // Label for number of occurances
             let valueLabel = UILabel()
-            valueLabel.text = count > 0 ? String(count) : ""
+            valueLabel.text = String(count)
             valueLabel.textAlignment = .center
             valueLabel.textColor = .secondaryLabel
             bar.addSubview(valueLabel)

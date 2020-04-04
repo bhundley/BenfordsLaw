@@ -13,9 +13,9 @@ enum ResultType {
 }
 
 struct StateData: Codable {
-    var state: String
-    var positive: Int
-    var negative: Int
-    var total: Int
-    var totalTestResults: Int
+    var state: String?
+    var positive: Int?
+    var negative: Int?
+    var total: Int?
+    var totalTestResults: Int?
 }
